@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astra Honda Motor Indonesia</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Top bar (containing login / language / contact etc) -->
+        <div id="top-bar">
+            <div class="container">
+                <a href="#">Dealer & Showroom</a>
+                <a href="#">Bantuan</a>
+                <a href="#">Cari Dealer</a>
+                <!-- bisa tambah elemen lainnya -->
+            </div>
+        </div>
+
+        <!-- Logo & Navigation utama -->
+        <div id="main-nav">
+            <div class="container">
+                <div id="logo">
+                    <a href="#">
+                        <!-- logo image placeholder -->
+                        <img src="logo-honda.png" alt="Astra Honda Motor">
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Motor</a></li>
+                        <li><a href="#">After Sales</a></li>
+                        <li><a href="#">Pemesanan & Pembelian</a></li>
+                        <li><a href="#">Beli Kredit</a></li>
+                        <li><a href="#">Promo</a></li>
+                        <li><a href="#">Berita & Acara</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Banner utama -->
+    <section id="hero">
+        <div class="container">
+            <!-- Gambar besar / slider -->
+            <div id="slider">
+                <div class="slide">
+                    <img src="banner1.jpg" alt="Promo Terbaru Honda">
+                </div>
+                <!-- bisa multiple slide jika ingin slider -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Pilihan Motor / Kategori -->
+    <section id="kategori-motor">
+        <div class="container">
+            <h2>Pilih Motor Honda</h2>
+            <div class="kategori-list">
+                <div class="kategori-item">
+                    <a href="#">BeAT</a>
+                </div>
+                <div class="kategori-item">
+                    <a href="#">Vario</a>
+                </div>
+                <div class="kategori-item">
+                    <a href="#">CBR</a>
+                </div>
+                <div class="kategori-item">
+                    <a href="#">CRF</a>
+                </div>
+                <!-- dst -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Promo / Berita -->
+    <section id="promo-berita">
+        <div class="container">
+            <div class="promo">
+                <h2>Promo Terbaru</h2>
+                <article>
+                    <h3>Promo 1</h3>
+                    <p>Deskripsi singkat promo.</p>
+                    <a href="#">Selengkapnya</a>
+                </article>
+                <article>
+                    <h3>Promo 2</h3>
+                    <p>Deskripsi singkat promo.</p>
+                    <a href="#">Selengkapnya</a>
+                </article>
+                <!-- lebih banyak promo jika perlu -->
+            </div>
+            <div class="berita">
+                <h2>Berita & Acara</h2>
+                <article>
+                    <h3>Judul Berita / Acara</h3>
+                    <p>Deskripsi singkat berita / acara.</p>
+                    <a href="#">Selengkapnya</a>
+                </article>
+                <article>
+                    <h3>Judul Berita / Acara 2</h3>
+                    <p>Deskripsi singkat berita / acara.</p>
+                    <a href="#">Selengkapnya</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Simulasi Kredit -->
+    <section id="simulasi-kredit">
+        <div class="container">
+            <h2>Simulasi Kredit</h2>
+            <form id="form-simulasi" action="#" method="post">
+                <label for="motor">Jenis Motor</label><br>
+                <select id="motor" name="motor">
+          <option value="vario160">Vario 160</option>
+          <option value="beat">BeAT</option>
+          <option value="cb150r">CB150R</option>
+          <!-- dll -->
+        </select><br><br>
+
+                <label for="harga">Harga OTR</label><br>
+                <input type="number" id="harga" name="harga" placeholder="Masukkan Harga"><br><br>
+
+                <label for="dp">Uang Muka</label><br>
+                <input type="number" id="dp" name="dp" placeholder="Masukkan DP"><br><br>
+
+                <label for="tenor">Lama Angsuran (bulan)</label><br>
+                <select id="tenor" name="tenor">
+          <option value="12">12</option>
+          <option value="24">24</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+          <option value="60">60</option>
+        </select><br><br>
+
+                <button type="submit">Hitung</button>
+            </form>
+
+            <div id="hasil-simulasi">
+                <p>Angsuran/bulan: -</p>
+                <p>Total bayar: -</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Footer utama -->
+    <footer>
+        <div class="container">
+            <div id="footer-links">
+                <div class="footer-col">
+                    <h3>Produk Motor</h3>
+                    <ul>
+                        <li><a href="#">BeAT</a></li>
+                        <li><a href="#">Vario</a></li>
+                        <li><a href="#">CBR</a></li>
+                        <!-- dll -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Layanan Pelanggan</h3>
+                    <ul>
+                        <li><a href="#">Bantuan</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Garansi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Tentang Kami</h3>
+                    <ul>
+                        <li><a href="#">Profil Perusahaan</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Ikuti Kami</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-bottom">
+                <p>&copy; 2025 Astra Honda Motor Indonesia. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
