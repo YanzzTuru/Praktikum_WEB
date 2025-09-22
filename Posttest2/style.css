@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #D70000;
+    --secondary-color: #FFCC00;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --dark-bg: #f0f0f0;
+    --white: #fff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.12);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--white);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3.2em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.8em;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-size: 1.05em;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #B70000;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background: #e6b300;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 55px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/banner.jpg") no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.banner-content {
+    max-width: 800px;
+}
+
+.banner h1 {
+    font-size: 4.5em;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    line-height: 1.1;
+}
+
+.banner p {
+    font-size: 1.3em;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+section {
+    padding: 80px 40px;
+    margin-top: -1px;
+}
+
+.produk,
+.simulasi,
+.layanan,
+.kontak {
+    padding: 80px 20px;
+}
+
+.produk {
+    background: var(--light-bg);
+}
+
+.produk-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produk-item {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.produk-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.produk-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.produk-item h3 {
+    margin: 20px 0 10px;
+    color: var(--primary-color);
+}
+
+.produk-item p {
+    padding: 0 20px 20px;
+    color: #666;
+    font-size: 1em;
+}
+
+.produk-item .btn {
+    margin-bottom: 20px;
+}
+
+.simulasi {
+    background: var(--dark-bg);
+}
+
+.simulasi-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.simulasi label {
+    margin: 15px 0 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 1.05em;
+}
+
+.simulasi input,
+.simulasi select {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.simulasi input:focus,
+.simulasi select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(215, 0, 0, 0.2);
+}
+
+.simulasi .btn {
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.layanan {
+    background: var(--white);
+}
+
+.layanan-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.layanan-item {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.layanan-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.layanan-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.layanan-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+.kontak {
+    background: linear-gradient(to right, var(--primary-color), #E84D4D);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.kontak .section-title {
+    color: var(--white);
+}
+
+.kontak .section-title::after {
+    background: var(--secondary-color);
+}
+
+.kontak address p {
+    margin-bottom: 10px;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+.kontak address p i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.kontak address a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.kontak address a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.95em;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px 25px;
+    }
+    nav ul li {
+        margin-left: 20px;
+    }
+    .banner h1 {
+        font-size: 3.5em;
+    }
+    .banner p {
+        font-size: 1.1em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    nav {
+        margin-top: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    .banner {
+        height: 70vh;
+    }
+    .banner h1 {
+        font-size: 2.8em;
+    }
+    .banner p {
+        font-size: 1em;
+    }
+    .section-title {
+        font-size: 2.2em;
+    }
+    .produk-list,
+    .layanan-list {
+        grid-template-columns: 1fr;
+    }
+    .simulasi-form {
+        padding: 30px;
+    }
+    .kontak address p {
+        font-size: 1.1em;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-links {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+    .produk,
+    .simulasi,
+    .layanan,
+    .kontak {
+        padding: 50px 15px;
+    }
+    header .logo img {
+        height: 45px;
+    }
+}
